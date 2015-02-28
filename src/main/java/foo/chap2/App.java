@@ -1,4 +1,4 @@
-package foo.basics;
+package foo.chap2;
 
 /**
  * Hello world!
