@@ -1,4 +1,4 @@
-package foo.chap2;
+package foo.chap2_impl;
 
 import junit.framework.Test;
 import junit.framework.TestCase;
