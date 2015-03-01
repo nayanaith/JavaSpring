@@ -5,10 +5,28 @@ xsi:schemaLocation="http://www.springframework.org/schema/beans
 http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 
-<!-- Bean declarations go here -->
-<bean id="duke"
-	class="foo.chap2_impl.Juggler"	>
-	<constructor-arg value="15"/>
-</bean>
+	<bean	id="duke"
+			class="foo.chap2_impl.Juggler"	>
+		<constructor-arg value="15"/>
+	</bean>
 
+	<bean	id="sonnet29"
+			class="foo.chap2_impl.Sonnet29">
+	</bean>
+	
+	<bean	id="poeticDuke"
+			class="foo.chap2_impl.PoeticJuggler">
+		<constructor-arg value="15"/>
+		<constructor-arg ref="sonnet29"/>
+	</bean>
+	
+	<bean	id="tehStage"
+		  	class="foo.chap2_impl.Stage"
+		  	factory-method="getInstance">
+	</bean>
+	
+	<bean	id="kenny"
+			class="foo.chap2.Instrumentalist">
+			<property name="song" value="Jingle Bells"></property> 
+	</bean>
 </beans>
